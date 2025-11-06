@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2. Weltkrieg Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="quiz-container">
+    <!-- Startbildschirm -->
+    <div id="start-screen">
+        <h1>2. Weltkrieg Quiz</h1>
+        <p>Teste dein Wissen über den Zweiten Weltkrieg!</p>
+        <button id="start-btn">Quiz starten</button>
+    </div>
+
+    <!-- Fragenbildschirm -->
+    <div id="question-screen" class="hidden">
+        <div id="progress-wrapper">
+            <div id="progress-bar"></div>
+        </div>
+        <h2 id="frage"></h2>
+        <ul id="antworten"></ul>
+        <p id="feedback"></p>
+        <div id="timer">Zeit: <span id="time">15</span>s</div>
+        <div id="points-bar-wrapper">
+            <div id="points-bar"></div>
+        </div>
+        <button id="next-btn" class="hidden">Nächste Frage</button>
+    </div>
+
+    <!-- Ergebnisbildschirm -->
+    <div id="result-screen" class="hidden">
+        <h2>Ergebnis</h2>
+        <p id="score"></p>
+        <h3>Highscore</h3>
+        <ul id="highscores"></ul>
+        <button id="restart-btn">Quiz erneut starten</button>
+    </div>
+</div>
+
+<!-- Konfetti Canvas -->
+<canvas id="confetti-canvas"></canvas>
+
+<!-- Credits -->
+<div id="credits">Created by Lenny</div>
+
+<!-- Soundeffekte -->
+<audio id="correct-sound" src="sounds/correct.mp3"></audio>
+<audio id="wrong-sound" src="sounds/wrong.mp3"></audio>
+<audio id="tick-sound" src="sounds/tick.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
